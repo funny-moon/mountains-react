@@ -1,43 +1,19 @@
 import React from "react";
+import { skillText } from "../datas/data";
 
 const Skill = () => {
   return (
     <section id="skill">
-      <div class="skill_inner">
-        <h2 class="skill_title">My Climb</h2>
-        <div class="skill_decs">
-          <div>
-            <span>1.</span>
-            <h3>산은 지구의 모습을 만든다</h3>
-            <p>
-              산맥은 대륙의 경계를 만들고 바람의 흐름을 바꾸며 강과 숲, 그리고 다양한 생태계를
-              형성합니다. 우리가 살아가는 환경의 많은 부분은 산에서 시작된다고 해도 과언이
-              아닙니다.산맥은 대륙의 경계를 만들고 바람의 흐름을 바꾸며 강과 숲, 그리고 다양한
-              생태계를 형성합니다. 우리가 살아가는 환경의 많은 부분은 산에서 시작된다고 해도 과언이
-              아닙니다.
-            </p>
-          </div>
-          <div>
-            <span>2.</span>
-            <h3>산은 탐험의 시작점이 된다</h3>
-            <p>
-              오랫동안 사람들은 더 높은 곳을 향해 걸어왔습니다. 산은 언제나 새로운 길과 새로운
-              시선을 열어주는 공간이었습니다. 정상을 향해 나아가는 과정 속에는 인간의 호기심과 도전
-              정신이 담겨 있습니다.오랫동안 사람들은 더 높은 곳을 향해 걸어왔습니다. 산은 언제나
-              새로운 길과 새로운 시선을 열어주는 공간이었습니다. 정상을 향해 나아가는 과정 속에는
-              인간의 호기심과 도전 정신이 담겨 있습니다.
-            </p>
-          </div>
-          <div>
-            <span>3.</span>
-            <h3>산은 자연과 사람을 연결한다</h3>
-            <p>
-              산은 단순한 풍경을 넘어 문화와 역사, 그리고 삶의 방식까지 이어져 있습니다. 세계 곳곳의
-              산은 각 지역의 이야기와 전통을 품고 있으며 지금도 많은 사람들에게 특별한 의미로 남아
-              있습니다.산은 단순한 풍경을 넘어 곳곳의 산은 각 지역의 이야기와 전통을 품고 있으며
-              지금도 많은 사람들에게 특별한 의미로 남아 있습니다.
-            </p>
-          </div>
+      <div className="skill_inner">
+        <h2 className="skill_title">My Climb</h2>
+        <div className="skill_decs">
+          {skillText.map((skill, key) => (
+            <div key={key}>
+              <span>{key + 1}.</span>
+              <h3>{skill.title}</h3>
+              <p>{skill.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

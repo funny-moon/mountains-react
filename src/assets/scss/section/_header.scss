@@ -1,15 +1,17 @@
 #header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  @include position-fixed;
   z-index: 10000;
   backdrop-filter: blur(15px);
 }
 .header_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  @include flex-between;
   padding: 1rem;
   background-color: rgba(123, 123, 123, 0.1);
 
@@ -33,6 +35,21 @@
     &.show {
       @media (max-width: 800px) {
         display: block;
+
+        + .header_nav_mobile {
+          span {
+            &::before {
+              @media (max-width: 800px) {
+                width: 20px;
+              }
+            }
+            &::after {
+              @media (max-width: 800px) {
+                width: 20px;
+              }
+            }
+          }
+        }
       }
       ul {
         @media (max-width: 800px) {

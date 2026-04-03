@@ -1,34 +1,38 @@
 import React from "react";
+import { contactText } from "../datas/data";
 
 const Contact = () => {
   return (
     <section id="contact">
-      <div class="contact_inner">
-        <h2 class="contact_title">contact</h2>
-        <div class="contact_lines top">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+      <div className="contact_inner">
+        <h2 className="contact_title">contact</h2>
+        <div className="contact_lines top">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
 
-        <div class="contact_text">
-          <div class="text">
-            <div>Continue the Journey</div>
-            <div>Explore More Mountains</div>
+        <div className="contact_text">
+          <div className="text">
+            {contactText.map((contact, key) => (
+              <div key={key}>
+                <a href={contact.link}>{contact.title}</a>
+              </div>
+            ))}
           </div>
         </div>
-        <div class="contact_lines bottom">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div className="contact_lines bottom">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </div>
       </div>
     </section>

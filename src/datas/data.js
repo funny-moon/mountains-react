@@ -53,6 +53,7 @@ export const siteText = [
       "Mountains Connect Nature and People",
       "Why Mountains Matter",
     ],
+    className: "s1",
   },
   {
     img: site02,
@@ -65,6 +66,7 @@ export const siteText = [
       "Mountains Connect Nature and People",
       "Why Mountains Matter",
     ],
+    className: "s2",
   },
   {
     img: site03,
@@ -77,6 +79,7 @@ export const siteText = [
       "Mountains Connect Nature and People",
       "Why Mountains Matter",
     ],
+    className: "s3",
   },
   {
     img: site04,
@@ -89,6 +92,7 @@ export const siteText = [
       "Mountains Connect Nature and People",
       "Why Mountains Matter",
     ],
+    className: "s4",
   },
 ];
 
